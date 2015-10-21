@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.facebook.android"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true" />
+    
+    <uses-sdk android:minSdkVersion="11" />
+    
+     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+       <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /><!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />	<!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /><!-- This app has permission to register with GCM and receive message -->
+
+    <!-- MODIFICATION REQUIRED - Replace "com.urbanairship.push.sample" with your package name -->
+    <permission android:name="com.facebook.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.facebook.android.permission.C2D_MESSAGE" />
+    <!-- The two elements above ensure that only this application can receive the messages and registration result -->
+    
+    
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+	<!--  END Urban Airship Required Permissions -->
+    
+    <application android:icon="@drawable/golfy_alternative4"
+        android:label="Golfy"
+        android:theme="@style/Theme.sport"
+        android:allowClearUserData="true" 
+    	android:enabled="true"
+        android:name=".Utility">
+        
+         
+            
+        
+        <activity android:name=".SplashActivity"
+            android:label="@string/app_name"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+               <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+                  </activity>
+          
+        
+        <activity android:name=".PushPreferencesActivity"
+            android:label="Preferences"                   
+                    android:icon="@drawable/golfy_alternative2"
+                    android:theme="@style/Theme.sport" >
+            
+            </activity>
+            
+        <activity android:name=".MainActivity" >
+                 <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
+        
+        <activity android:name=".LocationActivity" />
+        
+        <activity android:name=".Home"
+             android:label="@string/Home"                   
+                    android:icon="@drawable/golfy_alternative2"
+            >
+            
+            </activity>
+            
+         
+           
+           <activity
+              android:name=".Utility"
+                              android:icon="@drawable/golfy_alternative2" >
+                            </activity>   
+         
+           
+           <activity
+              android:name=".FeaturedNewsActivity"
+               android:label="Featured News"
+               android:icon="@drawable/golfy_alternative2" >
+               
+                 
+              </activity>
+                 
+                   <activity
+              android:name=".SingleMenuItemActivity"
+               android:label="Profile"
+               android:icon="@drawable/golfy_alternative2" >
+              </activity>
+                 <activity
+              android:name=".CoursesSingleMenuItemActivity"
+               android:label="Course"
+               android:icon="@drawable/golfy_alternative2" >
+              </activity>
+                 <activity
+              android:name=".TournamentsSingleMenuItemActivity"
+               android:label="Tournament"
+               android:icon="@drawable/golfy_alternative2" >
+              </activity>
+                
+                    <activity
+                    android:name=".Courses"
+                     android:label="@string/courses"
+                     android:icon="@drawable/golfy_alternative2" >
+                    </activity>
+                    
+                               <activity
+                    android:name=".ViewPagerAdapter"
+                     > </activity>
+                   
+                                 <activity
+                    android:name=".Players"
+                     android:label="@string/players"
+                     android:icon="@drawable/golfy_alternative2" >
+           
+                                </activity>
+        
+             <activity
+            android:name=".Tournaments"
+            android:label="@string/tournaments"
+             android:icon="@drawable/golfy_alternative2"
+              >
+          
+              </activity>
+        
+        <!-- REQUIRED for Urban Airship GCM-->
+        <receiver android:name="com.urbanairship.CoreReceiver" />
+        
+        <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">        
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+              
+                <!-- MODIFICATION REQUIRED - Use your package name as the category -->
+                <category android:name="com.facebook.android" />
+            </intent-filter>
+            
+            <!--  REQUIRED for detecting when the application is upgraded so it can request a new GCM ID -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.urbanairship.push.PushService" android:label="Push Notification Service"/>
+        
+        <service android:name="com.urbanairship.push.PushWorkerService" android:label="Push Notification Worker Service"/>
+        <service android:name="com.urbanairship.analytics.EventService" android:label="Event Service"/>
+        
+        
+        <!-- This is required for persisting preferences related to push and location -->
+        <provider android:name="com.urbanairship.UrbanAirshipProvider"
+            android:authorities="com.facebook.android.urbanairship.provider"
+            android:exported="false"
+            android:multiprocess="true" />
+        <!-- END OF REQUIRED ITEMS -->
+        
+        
+        <!-- OPTIONAL (for segments support) -->
+        <service android:name="com.urbanairship.location.LocationService" android:label="Segments Service"/>
+
+        <!-- OPTIONAL, if you want to receive push, push opened and registration completed intents -->
+        <!-- Replace the receiver below with your package and class name -->
+        
+        
+        <receiver android:name="com.facebook.android.IntentReceiver" />
+        
+        
+        
+        <activity android:name=".Hackbook"
+            android:label="Facebook"
+            android:icon="@drawable/golfy_alternative2"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        
+        <activity
+            android:name=".FriendsList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Places"
+            android:screenOrientation="portrait" />
+    </application>
+   
+</manifest>

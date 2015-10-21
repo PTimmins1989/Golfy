@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+    
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+       
+		<!-- Name Label -->
+		
+<!--  ListRow Left sied Thumbnail image -->
+	
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingBottom="3dip"
+            android:paddingTop="15dip"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            
+            />
+
+		<!-- Description label -->
+		
+			<TextView
+            android:id="@+id/fromdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+             android:gravity="top"
+              android:background="@color/gray"
+              android:textColor="@color/white" 
+             android:paddingBottom="1dip"
+              android:paddingLeft="1dip"
+               android:paddingRight="1dip"
+               
+           
+                                    />
+				<TextView
+            android:id="@+id/todate"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top" 
+             android:textIsSelectable="false" 
+             android:visibility="gone"
+                                    />
+					<TextView
+            android:id="@+id/currentholder"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top" 
+             android:textIsSelectable="false" 
+               android:visibility="gone"
+                                    />
+						<TextView
+            android:id="@+id/major"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top" 
+             android:textIsSelectable="false" 
+               android:visibility="gone"
+                                    />
+							<TextView
+            android:id="@+id/recordscore"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top" 
+             android:textIsSelectable="false" 
+               android:visibility="gone"
+                                    />
+			<TextView
+            android:id="@+id/sponsor"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top"
+             android:textIsSelectable="false" 
+               android:visibility="gone"
+                                    />
+		<TextView
+            android:id="@+id/prizefund"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top" 
+             android:textIsSelectable="false" 
+               android:visibility="gone"
+                                    />
+		<TextView
+            android:id="@+id/bio"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top" 
+             android:textIsSelectable="false" 
+               android:visibility="gone"
+                                    />
+		<TextView
+            android:id="@+id/facebook"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top"
+             android:textIsSelectable="false" 
+               android:visibility="gone" 
+                                    />
+		<TextView
+            android:id="@+id/twitter"
+            android:textIsSelectable="false" 
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="6sp"
+             android:gravity="top" 
+               android:visibility="gone"
+             
+                                    />
+       
+		<TextView
+            android:id="@+id/website"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top" 
+             android:textIsSelectable="false"
+               android:visibility="gone" 
+                                    />
+		<TextView
+            android:id="@+id/tourimage"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+             android:gravity="top"
+             android:textIsSelectable="false"  
+               android:visibility="gone"
+                                    />
+		
+		 <!-- Rightend Arrow -->    
+     <ImageView android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+     	android:src="@drawable/arrow"
+     	android:layout_alignParentRight="true"
+     	android:layout_centerVertical="true"
+     	/>
+		 
+    </RelativeLayout>

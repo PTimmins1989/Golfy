@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" >
+<LinearLayout
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+
+     <WebView
+         android:id="@+id/webView1"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />
+
+
+     <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_gradient"
+    android:gravity="center_horizontal" >
+     
+     <ImageButton
+         android:contentDescription="Facebook"
+         android:id="@+id/imageButton1"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:src="@drawable/facebook_icon_small"
+         android:background="@color/gray" />
+
+     <ImageButton
+         android:contentDescription="Twitter"
+         android:id="@+id/imageButton2"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:layout_toRightOf="@+id/imageButton1"
+         android:src="@drawable/twitter"
+         android:background="@color/gray" />
+     <ImageButton
+         android:contentDescription="wWw"
+         android:id="@+id/imageButton3"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:layout_toRightOf="@+id/imageButton2"
+         android:src="@drawable/www_icon" 
+         android:background="@color/gray"/>
+  </RelativeLayout>
+ 
+
+</LinearLayout>
+</ScrollView>

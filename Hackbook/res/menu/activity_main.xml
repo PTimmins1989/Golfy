@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:gravity="left"
+        android:title="@string/menu_settings"
+        android:icon="@drawable/popdownicon"
+            >
+            <menu>
+                                       <item
+    android:title="Home"
+    android:id="@+id/homemenu"
+    />
+                 <item
+    android:title="Players"
+    android:id="@+id/players"
+    />
+                  <item
+    android:title="Tournaments"
+    android:id="@+id/tournaments"
+    />
+                   <item
+    android:title="Courses"
+    android:id="@+id/courses"
+    />
+            
+  
+<item
+    android:title="Preferences"
+    android:id="@+id/preferences"
+      />
+  
+</menu>
+
+</item> 
+
+</menu>
